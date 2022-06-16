@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.json",
+  "include": ["**/*"],
+  "compilerOptions": {
+    "outDir": "../build/server",
+    "target": "es2016",
+    "module": "commonjs",
+    "skipDefaultLibCheck": true
+  }
+}

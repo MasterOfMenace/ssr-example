@@ -1,5 +1,10 @@
 import React from 'react';
 
 export const App = () => {
-  return <div>Hello, I am a React Application!</div>;
+  return (
+    <div>
+      <p>Hello World</p>
+      <p>Замени заголовок</p>
+    </div>
+  );
 };
