@@ -4,7 +4,7 @@ import render from './render-middleware';
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, '../')));
+app.use(express.static(path.resolve(__dirname, '../../')));
 
 app.use(render);
 

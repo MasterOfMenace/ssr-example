@@ -4,8 +4,6 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import TsconfigPathsPlugin from 'tsconfig-paths-webpack-plugin';
 import path from 'path';
 
-// type ModeType
-
 const isDev = process.env.NODE_ENV === 'development';
 
 const config: Configuration & {
@@ -42,13 +40,14 @@ const config: Configuration & {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/template.html'),
-      hash: false,
-      filename: 'index.html',
-      path: path.resolve(__dirname, 'build'),
-    }),
-  ],
+    isDev &&
+      new HtmlWebpackPlugin({
+        template: path.resolve(__dirname, './src/template.html'),
+        hash: false,
+        filename: 'index.html',
+        path: path.resolve(__dirname, 'build'),
+      }),
+  ].filter(Boolean),
   devtool: isDev ? 'source-map' : false,
 
   optimization: {

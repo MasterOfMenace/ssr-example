@@ -4,7 +4,7 @@ export const App = () => {
   return (
     <div>
       <p>Hello World</p>
-      <p>Замени заголовок</p>
+      <p>Simple ssr example</p>
     </div>
   );
 };
